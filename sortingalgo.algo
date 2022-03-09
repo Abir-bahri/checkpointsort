@@ -1,0 +1,23 @@
+ALGORITHM sorting
+VAR
+    arr : ARRAY_OF INTEGER[10];
+    i,j,k,n:integer;
+BEGIN
+    write("enter the length of the array")
+    read(n)
+    for i from 0 to n-1 do 
+       write("enter the array elemets")
+       read(arr[i])
+    end_for
+    for i from 0 to n-1 do 
+   
+        k = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > k)
+        
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        end_while
+        arr[j + 1] = k;
+    end_for
+END
